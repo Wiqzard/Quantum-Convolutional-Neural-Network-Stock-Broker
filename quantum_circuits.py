@@ -1,11 +1,10 @@
 import torch
 import itertools
+import numpy as np
 import qiskit
-
-# from qiskit import transpile, assemble
+from qiskit import transpile, assemble
 from qiskit.visualization import *
 from qiskit.circuit.random import random_circuit
-import numpy as np
 
 
 class QuantumCircuit:
