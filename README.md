@@ -1,4 +1,6 @@
 # Quantum-Convolutional-Neural-Network-Stock-Broker
+[![forthebadge](https://forthebadge.com/images/badges/built-with-science.svg)](https://forthebadge.com)
+[![Gem Version](https://badge.fury.io/rb/colorls.svg)](https://badge.fury.io/rb/colorls)
 Based on "Algorithmic financial trading with deep convolutional neural networks: Time series to image conversion approach" and \
 "Quanvolutional Neural Networks:Powering Image Recognition with Quantum Circuits"
 ## Data
