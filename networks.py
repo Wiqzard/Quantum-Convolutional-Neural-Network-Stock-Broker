@@ -31,7 +31,7 @@ class Net(nn.Module):
         return x.float().cuda()
 
 
-#CNN with Quantum Fully Connected Layer
+#CNN with quantum fully connected layer
 class NetQF(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
@@ -48,21 +48,20 @@ class NetQF(nn.Module):
         x = F.relu(self.conv2(x))
         x = F.max_pool2d(x, 2)
         x = self.dropout(x)
-        # x = x.view(-1, 256)
         x = torch.flatten(x, start_dim=1)
         x = F.relu(self.fc1(x))
         x = self.fc2(x)
         x = torch.chunk(x, 3, dim=1)
-        #x = self.hybrid(x)
         x = tuple(hy(x_) for hy, x_ in zip(self.hybrid, x))
         return torch.cat(x, -1)
 
 
+#CNN with one quantum convolutional layer
 class NetQC(nn.Module):
     def __init__(self):
-        super(Net, self).__init__()
-        self.quanv = Quanv(in_channels=1, out_channels=32, kernel_size = 3) 
-        self.conv = nn.Conv2d(32, 64, kernel_size=5)
+        super(NetQC, self).__init__()
+        self.quanv = Quanv(in_channels=1, out_channels=32, kernel_size=3) 
+        self.conv = nn.Conv2d(32, 64, kernel_size=3)
         self.dropout = nn.Dropout2d()
         self.fc1 = nn.Linear(256, 64)
         self.fc2 = nn.Linear(64, 3)
@@ -73,7 +72,6 @@ class NetQC(nn.Module):
         x = F.relu(self.conv(x))
         x = F.max_pool2d(x, 2)
         x = self.dropout(x)
-        # x = x.view(-1, 256)
         x = torch.flatten(x, start_dim=1)
         x = F.relu(self.fc1(x))
         x = self.fc2(x)

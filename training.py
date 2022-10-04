@@ -11,7 +11,7 @@ model = Net().to(device)
 summary(model, (1, 15, 15))
 
 optimizer = optim.Adam(model.parameters(), lr=0.001)
-loss_func = nn.CrossEntropyLoss().cuda()
+loss_func = nn.CrossEntropyLoss()
 
 epochs = 500
 loss_list = []
