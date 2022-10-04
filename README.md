@@ -1,6 +1,6 @@
 # Quantum-Convolutional-Neural-Network-Stock-Broker
-Based on "Algorithmic financial trading with deep convolutional neural networks: Time series to image conversion approach".
-
+Based on "Algorithmic financial trading with deep convolutional neural networks: Time series to image conversion approach" and \
+"Quanvolutional Neural Networks:Powering Image Recognition with Quantum Circuits"
 ## Data
 
 *  Google stock close price from 01.01.2015 to 30.09.2022 (yfinance).
@@ -36,9 +36,9 @@ cohen's Kappa: -0.007
   
   
  ## Sources
- https://arxiv.org/pdf/1904.04767.pdf
- https://www.sciencedirect.com/science/article/abs/pii/S1568494618302151
- https://qiskit.org/textbook/ch-machine-learning/machine-learning-qiskit-pytorch.html
- https://www.mdpi.com/2079-9292/11/5/721
+ * https://arxiv.org/pdf/1904.04767.pdf 
+ * https://www.sciencedirect.com/science/article/abs/pii/S1568494618302151
+ * https://qiskit.org/textbook/ch-machine-learning/machine-learning-qiskit-pytorch.html
+ * https://www.mdpi.com/2079-9292/11/5/721
 
  
